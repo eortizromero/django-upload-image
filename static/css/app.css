@@ -1,0 +1,35 @@
+
+.header-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.button {
+    background-color: rgb(4, 182, 57);
+    color: #fff;
+    padding: 10px 50px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: rgba(4, 182, 57, .8);
+}
+
+.br-input {
+    border-radius: 25px;
+}
+
+form {
+    padding: 20px;
+}
+
+.list-img {
+    padding: 20px;
+}
+

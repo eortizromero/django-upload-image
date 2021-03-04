@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>{{ data.titulo }}</h3>
+
+            </div>
+            <div class="col-10">
+                {% if data.imagen %}
+                <img src="{{ data.imagen.url }}" class="img-fluid"/>
+                {% endif %}
+            </div>
+            <a href="{% url 'image_delete' data.id %}">Eliminar</a>
+        </div>
+    </div>
+{% endblock %}

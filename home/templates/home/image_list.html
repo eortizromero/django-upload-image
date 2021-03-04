@@ -1,0 +1,29 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-6">
+            <h3>Subir imágenes</h3>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit" class="btn button">Subir</button>
+            </form>
+        </div>
+    </div>
+    <div class="row list-img">
+        {% if img_obj %}
+            {% for img in img_obj %}
+                <div class="col-3">
+                    <h3 class="header-text">{{ img.titulo }}</h3>
+                    {% if img.imagen %}
+                    <img src="{{ img.imagen.url }}" alt="Image not found" class="img-thumbnail"> 
+                    {% endif %}
+                    <a href="{% url 'image_detail' img.id %}" class="btn btn-secondary btn-sm">Ver Imagen</a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
